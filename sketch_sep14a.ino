@@ -85,13 +85,19 @@ void updateArray() {
   if (leftVar) {
     movesArray[arrayPosition] = 2;
   }
-  if (fwdVar) {
+  if (rightVar) {
     movesArray[arrayPosition] = 3;
   }
+  fwdVar=0;
+  leftVa=0;
+  rightVar=0; // reset these so they don't auto-trigger again!
+  arrayPosition++;
+
+  
   if (goVar) {
+    goVar=0;
     runPath();
   }
-  arrayPosition++;
   delay(200); // dead button time to prevent accidental double presses
 }
 
@@ -114,6 +120,7 @@ void runPath() {
     }
   memset(movesArray, 0, sizeof(movesArray)); // clear out the array
   arrayPosition=0;
+
 }
 
 void moveForward() {
@@ -134,7 +141,7 @@ void moveForward() {
 }
 
 void moveTurn (int theDirection) {
-  if (theDirection ==2) {
+  if (theDirection == 2) {
      digitalWrite(dir1A, HIGH);
     digitalWrite(dir2A, LOW);
     digitalWrite(dir1B, LOW);
