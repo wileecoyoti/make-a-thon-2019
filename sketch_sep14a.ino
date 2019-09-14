@@ -42,6 +42,8 @@ int buttonFWD = 4;
 int buttonLEFT = 3;
 int buttonRIGHT = 2;
 int buttonGO = 1;
+int buzzer = 11;
+
 
 /* --- misc use --- */
 int fwdVar;
@@ -62,8 +64,28 @@ void setup() {
   pinMode(pwmB, OUTPUT);
   pinMode(dir1B, OUTPUT);
   pinMode(dir2B, OUTPUT);
+  pinMode(buzzer, OUTPUT);
   
-
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
 }
 
 void loop() {
@@ -81,12 +103,21 @@ void loop() {
 void updateArray() {
   if (fwdVar) {
     movesArray[arrayPosition] = 1;
+      tone(buzzer, 1000);
+      delay(250);
+      noTone(buzzer);
   }
   if (leftVar) {
     movesArray[arrayPosition] = 2;
+      tone(buzzer, 1200);
+      delay(250);
+      noTone(buzzer);
   }
   if (rightVar) {
     movesArray[arrayPosition] = 3;
+      tone(buzzer, 800);
+      delay(250);
+      noTone(buzzer);
   }
   fwdVar=0;
   leftVar=0;
@@ -103,6 +134,27 @@ void updateArray() {
 
 
 void runPath() {
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+      tone(buzzer, 1000);
+      delay(200);
+      noTone(buzzer);
+      delay(100);
+  
   /* --- do the thing --- */
   arrayPosition=0;
     while (movesArray[arrayPosition] != 0) {
