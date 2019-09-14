@@ -89,7 +89,7 @@ void updateArray() {
     movesArray[arrayPosition] = 3;
   }
   fwdVar=0;
-  leftVa=0;
+  leftVar=0;
   rightVar=0; // reset these so they don't auto-trigger again!
   arrayPosition++;
 
@@ -110,10 +110,10 @@ void runPath() {
         moveForward();
       }
       if (movesArray[arrayPosition] == 2) {
-        moveTurn('2');
+        moveTurn(2);
       }
       if (movesArray[arrayPosition] == 3) {
-        moveTurn('3');
+        moveTurn(3);
       }
       delay(pauseBetween);
       arrayPosition++;
@@ -148,7 +148,7 @@ void moveTurn (int theDirection) {
     digitalWrite(dir2B, HIGH);
    
   }
-  if (theDirection ==3) {
+  if (theDirection == 3) {
      digitalWrite(dir1A, LOW);
     digitalWrite(dir2A, HIGH);
     digitalWrite(dir1B, HIGH);
