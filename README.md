@@ -25,19 +25,19 @@ Code for our shopper bot
  */
 
 /* --- Variables to adjust --- */
-int moveSpeed = 50; // pwm, 0-255 where 255 is max
-int moveRunTime = 500; // adjust this to get distance. This is time in milliseconds.
-int rotateRunTime = 500; // adjust this to get your 90 degrees. This is time in milliseconds.
-int pauseBetween = 300; // satisfying pause between moves
+* int moveSpeed = 50; // pwm, 0-255 where 255 is max
+* int moveRunTime = 500; // adjust this to get distance. This is time in milliseconds.
+* int rotateRunTime = 500; // adjust this to get your 90 degrees. This is time in milliseconds.
+* int pauseBetween = 300; // satisfying pause between moves
 
 /* --- Pinout --- */
-int pwmA = 9;
-int dir1A = 5;
-int dir2A = 6;
-int pwmB = 10;
-int dir1B = 7;
-int dir2B = 8;
-int buttonFWD = 4;
-int buttonLEFT = 3;
-int buttonRIGHT = 2;
-int buttonGO = 1;
+* int pwmA = 9;
+* int dir1A = 5;
+* int dir2A = 6;
+* int pwmB = 10;
+* int dir1B = 7;
+* int dir2B = 8;
+* int buttonFWD = 4;
+* int buttonLEFT = 3;
+* int buttonRIGHT = 2;
+* int buttonGO = 1;
