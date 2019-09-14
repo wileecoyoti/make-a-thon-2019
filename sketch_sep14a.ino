@@ -42,7 +42,7 @@ int buttonFWD = 4;
 int buttonLEFT = 3;
 int buttonRIGHT = 2;
 int buttonGO = 1;
-int buzzer = 11;
+int buzzer = 12;
 
 
 /* --- misc use --- */
@@ -66,27 +66,12 @@ void setup() {
   pinMode(dir2B, OUTPUT);
   pinMode(buzzer, OUTPUT);
   
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-}
+      tone(buzzer, 1000,200);
+      tone(buzzer, 1200,200);
+      tone(buzzer, 1000,200);
+      tone(buzzer, 1200,200);
+      tone(buzzer, 1000,200);
+ }
 
 void loop() {
   /* --- constant polling for button inputs, would be better as interrupt but whatever --- */
@@ -103,21 +88,15 @@ void loop() {
 void updateArray() {
   if (fwdVar) {
     movesArray[arrayPosition] = 1;
-      tone(buzzer, 1000);
-      delay(250);
-      noTone(buzzer);
+      tone(buzzer, 1000, 250);
   }
   if (leftVar) {
     movesArray[arrayPosition] = 2;
-      tone(buzzer, 1200);
-      delay(250);
-      noTone(buzzer);
+      tone(buzzer, 1200, 250);
   }
   if (rightVar) {
     movesArray[arrayPosition] = 3;
-      tone(buzzer, 800);
-      delay(250);
-      noTone(buzzer);
+      tone(buzzer, 800, 250);
   }
   fwdVar=0;
   leftVar=0;
@@ -134,26 +113,12 @@ void updateArray() {
 
 
 void runPath() {
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
-      tone(buzzer, 1000);
-      delay(200);
-      noTone(buzzer);
-      delay(100);
+      tone(buzzer, 1000,200);
+      tone(buzzer, 1200,200);
+      tone(buzzer, 1000,200);
+      tone(buzzer, 1200,200);
+      tone(buzzer, 1000,200);
+
   
   /* --- do the thing --- */
   arrayPosition=0;
