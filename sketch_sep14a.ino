@@ -22,7 +22,7 @@
  */
 
 /* --- Variables to adjust --- */
-int moveSpeed = 50; // pwm, 0-255 where 255 is max
+int moveSpeed = 255; // pwm, 0-255 where 255 is max
 int moveRunTime = 500; // adjust this to get distance. This is time in milliseconds.
 int rotateRunTime = 500; // adjust this to get your 90 degrees. This is time in milliseconds.
 int pauseBetween = 300; // satisfying pause between moves
@@ -148,7 +148,7 @@ void moveTurn (int theDirection) {
     digitalWrite(dir2B, HIGH);
    
   }
-  if (theDirection ==2) {
+  if (theDirection ==3) {
      digitalWrite(dir1A, LOW);
     digitalWrite(dir2A, HIGH);
     digitalWrite(dir1B, HIGH);
